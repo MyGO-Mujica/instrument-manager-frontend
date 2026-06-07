@@ -81,7 +81,7 @@ async function onSubmit() {
           style="margin-bottom: 24px; width: 100%;"
           block
         />
-        <a-form layout="vertical" @submit.prevent="onSubmit">
+        <a-form :model="form"  layout="vertical" @submit.prevent="onSubmit">
           <a-form-item label="用户名" name="username" :rules="[{ required: true, message: '请输入用户名' }]">
             <a-input v-model:value="form.username" placeholder="请输入用户名" size="large" />
           </a-form-item>
